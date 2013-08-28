@@ -1,4 +1,6 @@
-<html>
+<?php
+	include dirname(__FILE__)."/_app/config.php";
+?><html>
 <head>
 	<title>Local apps</title>
 	<link href="./_app/style_apps.css" rel="stylesheet" type="text/css" media="all" />
@@ -11,7 +13,7 @@
 		</h3>
 		<ul class="apps">
 		<?php
-			$files1 = scandir( dirname(__FILE__)."/" );
+			$files1 = scandir( $folder );
 			
 				foreach($files1 as $file){
 				switch($file){
